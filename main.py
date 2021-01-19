@@ -1,6 +1,6 @@
 import sys
-import sys
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import os
 os.chdir("c:\\your-execpath\\login_sample")
 import logging
@@ -14,9 +14,9 @@ logging.debug("AUTO LOGIN START")
 #
 def AutoLogin():
   # 起動するブラウザを宣言します
-  browser = webdriver.Chrome('c:\\your-execpath\\login_sample/chromedriver.exe')
+  browser = webdriver.Firefox(executable_path='/usr/lib/firefox')
   # ログイン対象のWebページURLを宣言します
-  url = "https://target_url.jp"
+  url = "web-auth.akashi.ac.jp"
   # 対象URLをブラウザで表示します。
   browser.get(url)
   # ログインIdとパスワードの入力領域を取得します。
