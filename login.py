@@ -1,8 +1,7 @@
 import sys
-import sys
 from selenium import webdriver
 import os
-os.chdir("c:\\your-execpath\\login_sample")
+os.chdir()
 import logging
 import logging.config
 # ログ出力設定　※本件では詳細割愛
@@ -14,7 +13,7 @@ logging.debug("AUTO LOGIN START")
 #
 def AutoLogin():
   # 起動するブラウザを宣言します
-  browser = webdriver.Chrome('c:\\your-execpath\\login_sample/chromedriver.exe')
+  browser = webdriver.Chrome()
   # ログイン対象のWebページURLを宣言します
   url = "https://target_url.jp"
   # 対象URLをブラウザで表示します。
